@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Primary Colors */
+    --color-primary: #D2691E; /* warm terracotta */
+    --color-primary-50: #FDF4F0; /* very light terracotta */
+    --color-primary-100: #F9E4D8; /* light terracotta */
+    --color-primary-200: #F2C9B1; /* medium light terracotta */
+    --color-primary-300: #EAAE8A; /* medium terracotta */
+    --color-primary-400: #E19363; /* medium dark terracotta */
+    --color-primary-500: #D2691E; /* base terracotta */
+    --color-primary-600: #B85A1A; /* dark terracotta */
+    --color-primary-700: #9E4B16; /* darker terracotta */
+    --color-primary-800: #843C12; /* very dark terracotta */
+    --color-primary-900: #6A2D0E; /* darkest terracotta */
+    --color-primary-foreground: #FFFFFF; /* white */
+
+    /* Secondary Colors */
+    --color-secondary: #8B4513; /* saddle brown */
+    --color-secondary-50: #F5F1ED; /* very light brown */
+    --color-secondary-100: #E8DDD2; /* light brown */
+    --color-secondary-200: #D1BBA5; /* medium light brown */
+    --color-secondary-300: #BA9978; /* medium brown */
+    --color-secondary-400: #A3774B; /* medium dark brown */
+    --color-secondary-500: #8B4513; /* base saddle brown */
+    --color-secondary-600: #763A10; /* dark brown */
+    --color-secondary-700: #612F0D; /* darker brown */
+    --color-secondary-800: #4C240A; /* very dark brown */
+    --color-secondary-900: #371907; /* darkest brown */
+    --color-secondary-foreground: #FFFFFF; /* white */
+
+    /* Accent Colors */
+    --color-accent: #228B22; /* cilantro green */
+    --color-accent-50: #F0F9F0; /* very light green */
+    --color-accent-100: #DCF2DC; /* light green */
+    --color-accent-200: #B9E5B9; /* medium light green */
+    --color-accent-300: #96D896; /* medium green */
+    --color-accent-400: #73CB73; /* medium dark green */
+    --color-accent-500: #228B22; /* base cilantro green */
+    --color-accent-600: #1E7A1E; /* dark green */
+    --color-accent-700: #1A691A; /* darker green */
+    --color-accent-800: #165816; /* very dark green */
+    --color-accent-900: #124712; /* darkest green */
+    --color-accent-foreground: #FFFFFF; /* white */
+
+    /* Background Colors */
+    --color-background: #FEFEFE; /* clean off-white */
+    --color-surface: #F8F6F3; /* warm gray */
+    --color-surface-50: #FDFCFB; /* very light warm gray */
+    --color-surface-100: #F8F6F3; /* base warm gray */
+    --color-surface-200: #F0EDE8; /* medium warm gray */
+    --color-surface-300: #E8E4DD; /* darker warm gray */
+
+    /* Text Colors */
+    --color-text-primary: #2D2D2D; /* deep charcoal */
+    --color-text-secondary: #6B6B6B; /* medium gray */
+    --color-text-muted: #9CA3AF; /* light gray */
+    --color-text-inverse: #FFFFFF; /* white */
+
+    /* Status Colors */
+    --color-success: #22C55E; /* bright green */
+    --color-success-50: #F0FDF4; /* very light green */
+    --color-success-100: #DCFCE7; /* light green */
+    --color-success-200: #BBF7D0; /* medium light green */
+    --color-success-300: #86EFAC; /* medium green */
+    --color-success-400: #4ADE80; /* medium dark green */
+    --color-success-500: #22C55E; /* base success green */
+    --color-success-600: #16A34A; /* dark green */
+    --color-success-700: #15803D; /* darker green */
+    --color-success-800: #166534; /* very dark green */
+    --color-success-900: #14532D; /* darkest green */
+    --color-success-foreground: #FFFFFF; /* white */
+
+    --color-warning: #F59E0B; /* amber */
+    --color-warning-50: #FFFBEB; /* very light amber */
+    --color-warning-100: #FEF3C7; /* light amber */
+    --color-warning-200: #FDE68A; /* medium light amber */
+    --color-warning-300: #FCD34D; /* medium amber */
+    --color-warning-400: #FBBF24; /* medium dark amber */
+    --color-warning-500: #F59E0B; /* base warning amber */
+    --color-warning-600: #D97706; /* dark amber */
+    --color-warning-700: #B45309; /* darker amber */
+    --color-warning-800: #92400E; /* very dark amber */
+    --color-warning-900: #78350F; /* darkest amber */
+    --color-warning-foreground: #FFFFFF; /* white */
+
+    --color-error: #EF4444; /* clear red */
+    --color-error-50: #FEF2F2; /* very light red */
+    --color-error-100: #FEE2E2; /* light red */
+    --color-error-200: #FECACA; /* medium light red */
+    --color-error-300: #FCA5A5; /* medium red */
+    --color-error-400: #F87171; /* medium dark red */
+    --color-error-500: #EF4444; /* base error red */
+    --color-error-600: #DC2626; /* dark red */
+    --color-error-700: #B91C1C; /* darker red */
+    --color-error-800: #991B1B; /* very dark red */
+    --color-error-900: #7F1D1D; /* darkest red */
+    --color-error-foreground: #FFFFFF; /* white */
+
+    /* Border Colors */
+    --color-border: #E5E7EB; /* gray-200 */
+    --color-border-muted: #F3F4F6; /* gray-100 */
+
+    /* Shadow Colors */
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+    --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1);
+
+    /* Typography */
+    --font-heading: 'Inter', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    --font-caption: 'Inter', sans-serif;
+    --font-data: 'JetBrains Mono', monospace;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-text-primary font-body;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer components {
+  .animate-scale-in {
+    animation: scaleIn 200ms ease-out;
+  }
+
+  @keyframes scaleIn {
+    from {
+      transform: scale(0.95);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  .transition-micro {
+    transition: transform 200ms ease-out;
+  }
+
+  .transition-micro:hover {
+    transform: scale(1.05);
+  }
+}
